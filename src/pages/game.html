@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Гра — Настільня</title>
+    <meta
+      name="description"
+      content="Детальний опис настільної гри: склад коробки, правила, оцінки та відгуки покупців."
+    />
+    <link rel="icon" href="../img/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <script src="../js/theme-init.js"></script>
+  </head>
+
+  <body>
+    <a class="visually-hidden-focusable btn btn-primary m-2" href="#main">Перейти до вмісту</a>
+
+    <header class="site-header sticky-top">
+      <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Головна навігація">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <span class="brand-mark"><i class="bi bi-dice-5-fill" aria-hidden="true"></i></span>
+            Настільня
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#main-nav"
+            aria-controls="main-nav"
+            aria-expanded="false"
+            aria-label="Розгорнути меню"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="main-nav">
+            <ul class="navbar-nav me-auto mb-3 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Головна</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="catalog.html">Каталог</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  >Категорії</a
+                >
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="catalog.html?genre=strategy">Стратегії</a></li>
+                  <li><a class="dropdown-item" href="catalog.html?genre=family">Сімейні</a></li>
+                  <li><a class="dropdown-item" href="catalog.html?genre=party">Вечіркові</a></li>
+                  <li><a class="dropdown-item" href="catalog.html?genre=coop">Кооперативні</a></li>
+                  <li><a class="dropdown-item" href="catalog.html?genre=duel">Дуельні</a></li>
+                  <li>
+                    <a class="dropdown-item" href="catalog.html?genre=abstract">Абстрактні</a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li><a class="dropdown-item" href="catalog.html?genre=kids">Дитячі</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="about.html">Про нас</a></li>
+            </ul>
+
+            <form class="d-flex mb-3 mb-lg-0 me-lg-3" role="search" action="catalog.html">
+              <div class="input-group">
+                <input
+                  class="form-control"
+                  type="search"
+                  name="q"
+                  placeholder="Пошук гри"
+                  aria-label="Пошук гри"
+                />
+                <button class="btn btn-outline-light" type="submit">
+                  <i class="bi bi-search" aria-hidden="true"></i>
+                  <span class="visually-hidden">Шукати</span>
+                </button>
+              </div>
+            </form>
+
+            <div class="d-flex gap-2">
+              <button
+                class="btn btn-outline-light theme-toggle"
+                type="button"
+                data-theme-toggle
+                aria-label="Перемкнути тему оформлення"
+              >
+                <i class="bi bi-moon-stars theme-toggle__moon" aria-hidden="true"></i>
+                <i class="bi bi-sun theme-toggle__sun" aria-hidden="true"></i>
+              </button>
+              <button
+                class="btn btn-warning position-relative"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#cart"
+              >
+                <i class="bi bi-bag" aria-hidden="true"></i>
+                Кошик
+                <span
+                  class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-danger"
+                ></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <div class="container py-4" id="game-page">
+        <nav aria-label="Навігаційний ланцюжок">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Головна</a></li>
+            <li class="breadcrumb-item"><a href="catalog.html">Каталог</a></li>
+            <li class="breadcrumb-item active" aria-current="page" data-field="title"></li>
+          </ol>
+        </nav>
+
+        <div class="row g-4 g-lg-5">
+          <div class="col-12 col-lg-6">
+            <div id="gallery" class="carousel slide">
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#gallery"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Обкладинка"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#gallery"
+                  data-bs-slide-to="1"
+                  aria-label="Розкладка на столі"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#gallery"
+                  data-bs-slide-to="2"
+                  aria-label="Компоненти"
+                ></button>
+              </div>
+              <div class="carousel-inner rounded-4">
+                <div class="carousel-item active">
+                  <img class="gallery__main" data-cover src="" alt="" width="600" height="450" />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    class="gallery__main"
+                    src="../img/shot-setup.svg"
+                    alt="Розкладка гри на столі"
+                    width="600"
+                    height="450"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    class="gallery__main"
+                    src="../img/shot-components.svg"
+                    alt="Компоненти гри"
+                    width="600"
+                    height="450"
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#gallery"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Попереднє фото</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#gallery"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Наступне фото</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <span class="badge" data-badge></span>
+              <span class="eyebrow" data-field="genre"></span>
+            </div>
+
+            <h1 class="h2" data-field="title"></h1>
+
+            <p class="d-flex align-items-center gap-2 mb-3">
+              <span class="text-warning" data-stars></span>
+              <strong data-field="rating"></strong>
+              <span class="text-body-secondary">· <span data-field="reviews"></span> відгуків</span>
+            </p>
+
+            <p class="lead" data-field="summary"></p>
+
+            <p class="d-flex align-items-baseline gap-2 mb-3">
+              <span class="display-6 mb-0" data-field="price"></span>
+              <s class="text-body-secondary" data-old-price></s>
+            </p>
+
+            <div class="d-grid d-sm-flex gap-2 mb-4">
+              <button class="btn btn-primary btn-lg" type="button" data-buy>
+                <i class="bi bi-bag-plus" aria-hidden="true"></i>
+                Додати в кошик
+              </button>
+              <button class="btn btn-outline-primary btn-lg" type="button" data-compare-btn>
+                <i class="bi bi-bar-chart-steps" aria-hidden="true"></i>
+                До порівняння
+              </button>
+              <button
+                class="btn btn-outline-secondary btn-lg"
+                type="button"
+                data-bs-toggle="tooltip"
+                data-bs-title="Збережеться у вашому браузері"
+                aria-label="Додати в бажане"
+              >
+                <i class="bi bi-heart" aria-hidden="true"></i>
+              </button>
+            </div>
+
+            <div class="alert alert-success d-flex gap-2" role="alert">
+              <i class="bi bi-truck fs-5" aria-hidden="true"></i>
+              <span>Є на складі — відправимо сьогодні, якщо замовити до 15:00.</span>
+            </div>
+
+            <div class="spec-list">
+              <div class="spec">
+                <p class="spec__label mb-0">Гравців</p>
+                <p class="spec__value mb-0" data-field="players"></p>
+              </div>
+              <div class="spec">
+                <p class="spec__label mb-0">Партія</p>
+                <p class="spec__value mb-0" data-field="time"></p>
+              </div>
+              <div class="spec">
+                <p class="spec__label mb-0">Вік</p>
+                <p class="spec__value mb-0" data-field="age"></p>
+              </div>
+              <div class="spec">
+                <p class="spec__label mb-0">Рік</p>
+                <p class="spec__value mb-0" data-field="year"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 mt-1">
+          <div class="col-12">
+            <ul class="nav nav-pills flex-nowrap overflow-auto mb-3" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="tab-about"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pane-about"
+                  type="button"
+                  role="tab"
+                  aria-controls="pane-about"
+                  aria-selected="true"
+                >
+                  Опис
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="tab-rules"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pane-rules"
+                  type="button"
+                  role="tab"
+                  aria-controls="pane-rules"
+                  aria-selected="false"
+                >
+                  Як грати
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="tab-box"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pane-box"
+                  type="button"
+                  role="tab"
+                  aria-controls="pane-box"
+                  aria-selected="false"
+                >
+                  Комплектація
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="tab-reviews"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pane-reviews"
+                  type="button"
+                  role="tab"
+                  aria-controls="pane-reviews"
+                  aria-selected="false"
+                >
+                  Відгуки
+                </button>
+              </li>
+            </ul>
+
+            <div class="tab-content card card-body">
+              <div
+                class="tab-pane fade show active"
+                id="pane-about"
+                role="tabpanel"
+                aria-labelledby="tab-about"
+                tabindex="0"
+              >
+                <h2 class="h5">Про гру</h2>
+                <p data-field="summary"></p>
+                <p class="text-body-secondary mb-0">
+                  Коробка з українською локалізацією: правила, картки та планшети перекладені, у
+                  комплекті пам'ятка для швидкого старту. Гра добре заходить і як перша серйозна
+                  покупка, і як поповнення полиці на кілька десятків партій.
+                </p>
+              </div>
+
+              <div
+                class="tab-pane fade"
+                id="pane-rules"
+                role="tabpanel"
+                aria-labelledby="tab-rules"
+                tabindex="0"
+              >
+                <h2 class="h5">Як проходить партія</h2>
+                <ol class="mb-0">
+                  <li class="mb-2">
+                    Розкладіть поле й видайте кожному стартовий набір компонентів.
+                  </li>
+                  <li class="mb-2">
+                    По черзі виконуйте одну дію за хід: беріть ресурс, грайте карту або пасуйте.
+                  </li>
+                  <li class="mb-2">
+                    Виконані завдання приносять очки, невиконані — мінус у кінці партії.
+                  </li>
+                  <li>
+                    Гра завершується, коли закінчується колода. Перемагає найбільша сума очок.
+                  </li>
+                </ol>
+              </div>
+
+              <div
+                class="tab-pane fade"
+                id="pane-box"
+                role="tabpanel"
+                aria-labelledby="tab-box"
+                tabindex="0"
+              >
+                <h2 class="h5">Що всередині</h2>
+                <div class="table-responsive">
+                  <table class="table table-hover align-middle mb-0">
+                    <caption class="text-body-secondary">
+                      Комплектація може незначно відрізнятися від тиражу до тиражу.
+                    </caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">Компонент</th>
+                        <th scope="col" class="text-end">Кількість</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row" class="fw-normal">Ігрове поле</th>
+                        <td class="text-end">1</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="fw-normal">Картки</th>
+                        <td class="text-end">128</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="fw-normal">Дерев'яні фішки</th>
+                        <td class="text-end">40</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="fw-normal">Планшети гравців</th>
+                        <td class="text-end">5</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="fw-normal">Правила українською</th>
+                        <td class="text-end">1</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div
+                class="tab-pane fade"
+                id="pane-reviews"
+                role="tabpanel"
+                aria-labelledby="tab-reviews"
+                tabindex="0"
+              >
+                <div class="row g-4">
+                  <div class="col-12 col-lg-5">
+                    <h2 class="h5">Як оцінюють</h2>
+                    <div class="d-grid gap-2 mb-4" data-ratings></div>
+
+                    <h3 class="h6">Залишити відгук</h3>
+                    <form
+                      class="needs-validation"
+                      novalidate
+                      data-success-message="Дякуємо, відгук з'явиться після модерації"
+                    >
+                      <div class="mb-3">
+                        <label class="form-label" for="review-name">Ім'я</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="review-name"
+                          required
+                          minlength="2"
+                        />
+                        <div class="invalid-feedback">Вкажіть, як вас підписати.</div>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label" for="review-rating">Оцінка</label>
+                        <select class="form-select" id="review-rating" required>
+                          <option value="">Оберіть оцінку</option>
+                          <option value="5">5 — чудово</option>
+                          <option value="4">4 — добре</option>
+                          <option value="3">3 — нормально</option>
+                          <option value="2">2 — слабко</option>
+                          <option value="1">1 — погано</option>
+                        </select>
+                        <div class="invalid-feedback">Поставте оцінку від 1 до 5.</div>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label" for="review-text">Враження</label>
+                        <textarea
+                          class="form-control"
+                          id="review-text"
+                          rows="4"
+                          required
+                          minlength="20"
+                        ></textarea>
+                        <div class="form-text">
+                          Мінімум 20 символів — коротке «норм» не допомагає іншим.
+                        </div>
+                        <div class="invalid-feedback">Напишіть хоча б кілька речень.</div>
+                      </div>
+                      <button class="btn btn-primary" type="submit">Надіслати відгук</button>
+                    </form>
+                  </div>
+
+                  <div class="col-12 col-lg-7" data-reviews></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="section pb-0">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow mb-1">З цим також беруть</p>
+              <h2 class="h4 mb-0">Схожі ігри</h2>
+            </div>
+          </div>
+          <div class="row g-3 g-lg-4" data-related></div>
+        </section>
+        <div class="mobile-actions d-lg-none">
+          <div class="d-flex align-items-center gap-3">
+            <span class="fw-semibold" data-field="price"></span>
+            <button class="btn btn-primary flex-grow-1" type="button" data-buy>
+              Додати в кошик
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer pt-5">
+      <div class="container">
+        <div class="row g-4 pb-4">
+          <div class="col-12 col-lg-4">
+            <p class="navbar-brand text-white mb-2">
+              <span class="brand-mark"><i class="bi bi-dice-5-fill" aria-hidden="true"></i></span>
+              Настільня
+            </p>
+            <p class="mb-0">
+              Магазин настільних ігор для тих, хто грає, а не колекціонує пил на полиці.
+            </p>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h2 class="h6 mb-3">Каталог</h2>
+            <ul class="list-unstyled d-grid gap-2 mb-0">
+              <li><a href="catalog.html?genre=strategy">Стратегії</a></li>
+              <li><a href="catalog.html?genre=family">Сімейні</a></li>
+              <li><a href="catalog.html?genre=party">Вечіркові</a></li>
+              <li><a href="catalog.html?genre=kids">Дитячі</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h2 class="h6 mb-3">Магазин</h2>
+            <ul class="list-unstyled d-grid gap-2 mb-0">
+              <li><a href="about.html">Про нас</a></li>
+              <li><a href="about.html#faq">Питання й відповіді</a></li>
+              <li><a href="about.html#contacts">Контакти</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-lg-4">
+            <h2 class="h6 mb-3">Наш клуб</h2>
+            <p>
+              Щочетверга о 18:00 відкриті ігрові вечори на Університетській, 28 — поруч із головним
+              корпусом ЧНУ.
+            </p>
+            <ul class="list-unstyled d-flex gap-3 mb-0 fs-4">
+              <li>
+                <a href="#" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+              </li>
+              <li>
+                <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="footer-note small py-3 mb-0">
+          © <span id="year"></span> Настільня. Навчальний проєкт, ціни та відгуки вигадані.
+        </p>
+      </div>
+    </footer>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="cart" aria-labelledby="cart-title">
+      <div class="offcanvas-header">
+        <h2 class="offcanvas-title h5" id="cart-title">Кошик</h2>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Закрити"
+        ></button>
+      </div>
+      <div class="offcanvas-body d-flex flex-column">
+        <div id="cart-lines"></div>
+        <div class="mt-auto d-none" id="cart-footer">
+          <div class="d-flex justify-content-between border-top pt-3 mb-3">
+            <span class="text-body-secondary">Разом</span>
+            <strong id="cart-total"></strong>
+          </div>
+          <div class="d-grid gap-2">
+            <button
+              class="btn btn-primary"
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#checkout"
+            >
+              Оформити замовлення
+            </button>
+            <button class="btn btn-outline-danger" type="button" id="cart-clear">
+              Очистити кошик
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="checkout"
+      tabindex="-1"
+      aria-labelledby="checkout-title"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title h5" id="checkout-title">Оформлення замовлення</h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Закрити"
+            ></button>
+          </div>
+          <form
+            class="needs-validation"
+            novalidate
+            data-success-message="Замовлення прийнято, чекайте дзвінка"
+          >
+            <div class="modal-body">
+              <div class="row g-3">
+                <div class="col-12">
+                  <label class="form-label" for="checkout-name">Ім'я та прізвище</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="checkout-name"
+                    required
+                    minlength="3"
+                  />
+                  <div class="invalid-feedback">Вкажіть, на кого оформити замовлення.</div>
+                </div>
+                <div class="col-12 col-sm-6">
+                  <label class="form-label" for="checkout-phone">Телефон</label>
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="checkout-phone"
+                    placeholder="+380"
+                    pattern="\+?[0-9\s\-]{10,17}"
+                    required
+                  />
+                  <div class="invalid-feedback">Формат: +380 XX XXX XX XX.</div>
+                </div>
+                <div class="col-12 col-sm-6">
+                  <label class="form-label" for="checkout-city">Місто</label>
+                  <input type="text" class="form-control" id="checkout-city" required />
+                  <div class="invalid-feedback">Вкажіть місто доставки.</div>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="checkout-delivery">Спосіб доставки</label>
+                  <select class="form-select" id="checkout-delivery" required>
+                    <option value="">Оберіть варіант</option>
+                    <option>Нова пошта, відділення</option>
+                    <option>Нова пошта, кур'єр</option>
+                    <option>Самовивіз із клубу</option>
+                  </select>
+                  <div class="invalid-feedback">Оберіть спосіб доставки.</div>
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="checkout-terms" required />
+                    <label class="form-check-label" for="checkout-terms">
+                      Погоджуюся з умовами повернення
+                    </label>
+                    <div class="invalid-feedback">Без цього замовлення не оформити.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                Скасувати
+              </button>
+              <button type="submit" class="btn btn-primary">Підтвердити</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" id="toast-host"></div>
+
+    <script src="../vendor/bootstrap.bundle.min.js"></script>
+    <script src="../js/games.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/game.js"></script>
+  </body>
+</html>

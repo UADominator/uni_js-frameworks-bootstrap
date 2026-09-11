@@ -1,11 +1,25 @@
 {
-  "name": "jsframeworks",
+  "name": "nastilnia",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Каталог настільних ігор — лабораторна робота з Bootstrap 5",
+  "main": "src/pages/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "assets": "node scripts/copy-assets.mjs",
+    "css": "sass --load-path=node_modules --quiet-deps --silence-deprecation=import --no-source-map src/scss/main.scss src/css/main.css",
+    "css:watch": "npm run css -- --watch",
+    "build": "npm run assets && npm run css",
+    "start": "npm run build && node scripts/serve.mjs",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap-icons": "^1.13.1",
+    "prettier": "^3.9.6",
+    "sass": "^1.104.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  }
 }

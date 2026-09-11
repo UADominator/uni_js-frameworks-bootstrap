@@ -1,0 +1,46 @@
+.hero {
+  position: relative;
+  display: grid;
+  align-items: center;
+  min-height: clamp(22rem, 52vh, 34rem);
+  padding-block: clamp(2.5rem, 7vw, 5rem);
+  color: #ffffff;
+  background-color: #14322a;
+  background-image: var(--hero-overlay), url('../img/hero.svg');
+  background-position: center;
+  background-size: cover;
+}
+
+.hero__title {
+  font-size: clamp(2rem, 5.5vw, 3.5rem);
+  max-width: 20ch;
+}
+
+.hero__lead {
+  max-width: 46ch;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.hero__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1.25rem, 5vw, 3rem);
+}
+
+.hero__stat-value {
+  font-family: $headings-font-family;
+  font-size: 1.75rem;
+  line-height: 1.1;
+  color: $warning;
+}
+
+.hero__stat-label {
+  font-size: $small-font-size;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+@include media-breakpoint-up(lg) {
+  .hero {
+    min-height: 60vh;
+  }
+}

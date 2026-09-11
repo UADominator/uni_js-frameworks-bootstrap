@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Про нас — Настільня</title>
+    <meta
+      name="description"
+      content="Магазин і клуб настільних ігор у Чернівцях: команда, відповіді на часті питання та контакти."
+    />
+    <link rel="icon" href="../img/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <script src="../js/theme-init.js"></script>
+  </head>
+
+  <body>
+    <a class="visually-hidden-focusable btn btn-primary m-2" href="#main">Перейти до вмісту</a>
+
+    <header class="site-header sticky-top">
+      <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Головна навігація">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <span class="brand-mark"><i class="bi bi-dice-5-fill" aria-hidden="true"></i></span>
+            Настільня
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#main-nav"
+            aria-controls="main-nav"
+            aria-expanded="false"
+            aria-label="Розгорнути меню"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="main-nav">
+            <ul class="navbar-nav me-auto mb-3 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Головна</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  >Категорії</a
+                >
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="catalog.html?genre=strategy">Стратегії</a></li>
+                  <li><a class="dropdown-item" href="catalog.html?genre=family">Сімейні</a></li>
+                  <li><a class="dropdown-item" href="catalog.html?genre=party">Вечіркові</a></li>
+                  <li><a class="dropdown-item" href="catalog.html?genre=coop">Кооперативні</a></li>
+                  <li><a class="dropdown-item" href="catalog.html?genre=duel">Дуельні</a></li>
+                  <li>
+                    <a class="dropdown-item" href="catalog.html?genre=abstract">Абстрактні</a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li><a class="dropdown-item" href="catalog.html?genre=kids">Дитячі</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="about.html">Про нас</a>
+              </li>
+            </ul>
+
+            <form class="d-flex mb-3 mb-lg-0 me-lg-3" role="search" action="catalog.html">
+              <div class="input-group">
+                <input
+                  class="form-control"
+                  type="search"
+                  name="q"
+                  placeholder="Пошук гри"
+                  aria-label="Пошук гри"
+                />
+                <button class="btn btn-outline-light" type="submit">
+                  <i class="bi bi-search" aria-hidden="true"></i>
+                  <span class="visually-hidden">Шукати</span>
+                </button>
+              </div>
+            </form>
+
+            <div class="d-flex gap-2">
+              <button
+                class="btn btn-outline-light theme-toggle"
+                type="button"
+                data-theme-toggle
+                aria-label="Перемкнути тему оформлення"
+              >
+                <i class="bi bi-moon-stars theme-toggle__moon" aria-hidden="true"></i>
+                <i class="bi bi-sun theme-toggle__sun" aria-hidden="true"></i>
+              </button>
+              <button
+                class="btn btn-warning position-relative"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#cart"
+              >
+                <i class="bi bi-bag" aria-hidden="true"></i>
+                Кошик
+                <span
+                  class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-danger"
+                ></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <div class="container py-4">
+        <nav aria-label="Навігаційний ланцюжок">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Головна</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Про нас</li>
+          </ol>
+        </nav>
+
+        <div class="row g-4 g-lg-5 align-items-center">
+          <div class="col-12 col-lg-6">
+            <p class="eyebrow mb-1">Хто ми</p>
+            <h1 class="h2">Почалося з полиці в гуртожитку</h1>
+            <p class="lead">
+              У 2021-му нас було четверо й одна коробка «Каркассона» на всіх. Зараз — невеликий
+              магазин і клуб, куди щочетверга приходить до тридцяти людей.
+            </p>
+            <p class="text-body-secondary mb-0">
+              Ми не тримаємо на складі все підряд. Кожну гру спершу розкладаємо самі, і якщо після
+              трьох партій ніхто не хоче четвертої — вона не потрапляє в каталог. Тому тут лише
+              шістнадцять позицій, а не тисяча.
+            </p>
+          </div>
+          <div class="col-12 col-lg-6">
+            <img
+              class="img-fluid rounded-4"
+              src="../img/shot-setup.svg"
+              alt="Настільна гра, розкладена на столі"
+            />
+          </div>
+        </div>
+      </div>
+
+      <section class="section pt-0">
+        <div class="container">
+          <div class="row g-3 text-center">
+            <div class="col-6 col-lg-3">
+              <div class="card h-100">
+                <div class="card-body">
+                  <p class="display-6 mb-1 text-primary-emphasis">16</p>
+                  <p class="text-body-secondary mb-0">ігор у каталозі</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3">
+              <div class="card h-100">
+                <div class="card-body">
+                  <p class="display-6 mb-1 text-primary-emphasis">1 240</p>
+                  <p class="text-body-secondary mb-0">замовлень за рік</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3">
+              <div class="card h-100">
+                <div class="card-body">
+                  <p class="display-6 mb-1 text-primary-emphasis">187</p>
+                  <p class="text-body-secondary mb-0">ігрових вечорів</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3">
+              <div class="card h-100">
+                <div class="card-body">
+                  <p class="display-6 mb-1 text-primary-emphasis">4.8</p>
+                  <p class="text-body-secondary mb-0">оцінка магазину</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section pt-0">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow mb-1">Кого ви почуєте в слухавці</p>
+              <h2 class="h3 mb-0">Команда</h2>
+            </div>
+          </div>
+          <div class="row g-4">
+            <div class="col-12 col-md-4">
+              <div class="card h-100">
+                <div class="card-body d-flex gap-3">
+                  <span class="avatar" aria-hidden="true">Б</span>
+                  <div>
+                    <h3 class="h6 mb-1">Богдан</h3>
+                    <p class="eyebrow mb-2">Закупівлі</p>
+                    <p class="card-text text-body-secondary mb-0">
+                      Обирає, що замовити наступним. Вважає, що будь-яку гру можна пояснити за п'ять
+                      хвилин.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="card h-100">
+                <div class="card-body d-flex gap-3">
+                  <span class="avatar" aria-hidden="true">К</span>
+                  <div>
+                    <h3 class="h6 mb-1">Катерина</h3>
+                    <p class="eyebrow mb-2">Клуб і події</p>
+                    <p class="card-text text-body-secondary mb-0">
+                      Веде четвергові вечори й підбирає гру під будь-яку компанію — від двох до
+                      дванадцяти.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="card h-100">
+                <div class="card-body d-flex gap-3">
+                  <span class="avatar" aria-hidden="true">О</span>
+                  <div>
+                    <h3 class="h6 mb-1">Олесь</h3>
+                    <p class="eyebrow mb-2">Склад і доставка</p>
+                    <p class="card-text text-body-secondary mb-0">
+                      Пакує коробки так, що кути доїжджають цілими. Знає розклад «Нової пошти»
+                      напам'ять.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section pt-0" id="faq">
+        <div class="container">
+          <div class="row g-4 g-lg-5">
+            <div class="col-12 col-lg-5">
+              <p class="eyebrow mb-1">Коротко</p>
+              <h2 class="h3">Питання, які ставлять щотижня</h2>
+              <p class="text-body-secondary mb-0">
+                Якщо потрібного питання тут немає — пишіть у Telegram, відповідаємо швидше, ніж на
+                пошту.
+              </p>
+            </div>
+            <div class="col-12 col-lg-7">
+              <div class="accordion" id="faq-accordion">
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq-1"
+                      aria-expanded="true"
+                      aria-controls="faq-1"
+                    >
+                      Скільки йде доставка
+                    </button>
+                  </h3>
+                  <div
+                    id="faq-1"
+                    class="accordion-collapse collapse show"
+                    data-bs-parent="#faq-accordion"
+                  >
+                    <div class="accordion-body">
+                      По Україні «Новою поштою» — один-два робочі дні. Замовлення до 15:00
+                      відправляємо того ж дня, пізніші — наступного ранку.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq-2"
+                      aria-expanded="false"
+                      aria-controls="faq-2"
+                    >
+                      Чи можна повернути гру
+                    </button>
+                  </h3>
+                  <div
+                    id="faq-2"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#faq-accordion"
+                  >
+                    <div class="accordion-body">
+                      Так, протягом 14 днів, якщо компоненти цілі й не загублені. Гроші повертаємо
+                      на картку впродовж трьох днів після отримання посилки.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq-3"
+                      aria-expanded="false"
+                      aria-controls="faq-3"
+                    >
+                      Усі ігри українською
+                    </button>
+                  </h3>
+                  <div
+                    id="faq-3"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#faq-accordion"
+                  >
+                    <div class="accordion-body">
+                      Так. Якщо конкретного тиражу українською не існує, ми його просто не
+                      замовляємо — англомовних коробок у каталозі немає.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq-4"
+                      aria-expanded="false"
+                      aria-controls="faq-4"
+                    >
+                      Можна прийти пограти перед покупкою
+                    </button>
+                  </h3>
+                  <div
+                    id="faq-4"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#faq-accordion"
+                  >
+                    <div class="accordion-body">
+                      Можна й потрібно. Щочетверга о 18:00 відкритий стіл, вхід вільний, будь-яку
+                      гру з каталогу дістанемо з полиці.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section pt-0" id="contacts">
+        <div class="container">
+          <div class="row g-4 g-lg-5">
+            <div class="col-12 col-lg-5">
+              <p class="eyebrow mb-1">Зв'язок</p>
+              <h2 class="h3">Контакти</h2>
+              <ul class="list-group list-group-flush mb-4">
+                <li class="list-group-item d-flex gap-3 px-0">
+                  <i class="bi bi-geo-alt fs-5 text-primary-emphasis" aria-hidden="true"></i>
+                  <span>Чернівці, вул. Університетська, 28 (поруч із головним корпусом ЧНУ)</span>
+                </li>
+                <li class="list-group-item d-flex gap-3 px-0">
+                  <i class="bi bi-telephone fs-5 text-primary-emphasis" aria-hidden="true"></i>
+                  <span>+380 67 123 45 67</span>
+                </li>
+                <li class="list-group-item d-flex gap-3 px-0">
+                  <i class="bi bi-envelope fs-5 text-primary-emphasis" aria-hidden="true"></i>
+                  <span>hello@nastilnia.ua</span>
+                </li>
+                <li class="list-group-item d-flex gap-3 px-0">
+                  <i class="bi bi-clock fs-5 text-primary-emphasis" aria-hidden="true"></i>
+                  <span>Пн–Сб, 11:00–20:00</span>
+                </li>
+              </ul>
+              <div class="alert alert-warning d-flex gap-2 mb-0" role="alert">
+                <i class="bi bi-info-circle fs-5" aria-hidden="true"></i>
+                <span>У неділю магазин зачинений, але замовлення на сайті приймаються.</span>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-7">
+              <div class="card">
+                <div class="card-body p-4">
+                  <h3 class="h5 mb-3">Написати нам</h3>
+                  <form
+                    class="row g-3 needs-validation"
+                    novalidate
+                    data-success-message="Повідомлення надіслано, відповімо протягом дня"
+                  >
+                    <div class="col-12 col-md-6">
+                      <label class="form-label" for="contact-name">Ім'я</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="contact-name"
+                        required
+                        minlength="2"
+                      />
+                      <div class="invalid-feedback">Як до вас звертатися?</div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <label class="form-label" for="contact-email">Пошта</label>
+                      <input type="email" class="form-control" id="contact-email" required />
+                      <div class="invalid-feedback">Введіть коректну адресу пошти.</div>
+                    </div>
+                    <div class="col-12">
+                      <label class="form-label" for="contact-topic">Тема</label>
+                      <select class="form-select" id="contact-topic" required>
+                        <option value="">Оберіть тему</option>
+                        <option>Питання про замовлення</option>
+                        <option>Повернення чи обмін</option>
+                        <option>Запис на ігровий вечір</option>
+                        <option>Співпраця</option>
+                      </select>
+                      <div class="invalid-feedback">Оберіть тему звернення.</div>
+                    </div>
+                    <div class="col-12">
+                      <label class="form-label" for="contact-message">Повідомлення</label>
+                      <textarea
+                        class="form-control"
+                        id="contact-message"
+                        rows="5"
+                        required
+                        minlength="10"
+                      ></textarea>
+                      <div class="invalid-feedback">Опишіть питання хоча б у двох реченнях.</div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="contact-consent"
+                          required
+                        />
+                        <label class="form-check-label" for="contact-consent">
+                          Даю згоду на обробку персональних даних
+                        </label>
+                        <div class="invalid-feedback">Без згоди ми не зможемо відповісти.</div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <button class="btn btn-primary" type="submit">
+                        <i class="bi bi-send" aria-hidden="true"></i>
+                        Надіслати
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer pt-5">
+      <div class="container">
+        <div class="row g-4 pb-4">
+          <div class="col-12 col-lg-4">
+            <p class="navbar-brand text-white mb-2">
+              <span class="brand-mark"><i class="bi bi-dice-5-fill" aria-hidden="true"></i></span>
+              Настільня
+            </p>
+            <p class="mb-0">
+              Магазин настільних ігор для тих, хто грає, а не колекціонує пил на полиці.
+            </p>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h2 class="h6 mb-3">Каталог</h2>
+            <ul class="list-unstyled d-grid gap-2 mb-0">
+              <li><a href="catalog.html?genre=strategy">Стратегії</a></li>
+              <li><a href="catalog.html?genre=family">Сімейні</a></li>
+              <li><a href="catalog.html?genre=party">Вечіркові</a></li>
+              <li><a href="catalog.html?genre=kids">Дитячі</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h2 class="h6 mb-3">Магазин</h2>
+            <ul class="list-unstyled d-grid gap-2 mb-0">
+              <li><a href="about.html">Про нас</a></li>
+              <li><a href="about.html#faq">Питання й відповіді</a></li>
+              <li><a href="about.html#contacts">Контакти</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-lg-4">
+            <h2 class="h6 mb-3">Наш клуб</h2>
+            <p>
+              Щочетверга о 18:00 відкриті ігрові вечори на Університетській, 28 — поруч із головним
+              корпусом ЧНУ.
+            </p>
+            <ul class="list-unstyled d-flex gap-3 mb-0 fs-4">
+              <li>
+                <a href="#" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+              </li>
+              <li>
+                <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="footer-note small py-3 mb-0">
+          © <span id="year"></span> Настільня. Навчальний проєкт, ціни та відгуки вигадані.
+        </p>
+      </div>
+    </footer>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="cart" aria-labelledby="cart-title">
+      <div class="offcanvas-header">
+        <h2 class="offcanvas-title h5" id="cart-title">Кошик</h2>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Закрити"
+        ></button>
+      </div>
+      <div class="offcanvas-body d-flex flex-column">
+        <div id="cart-lines"></div>
+        <div class="mt-auto d-none" id="cart-footer">
+          <div class="d-flex justify-content-between border-top pt-3 mb-3">
+            <span class="text-body-secondary">Разом</span>
+            <strong id="cart-total"></strong>
+          </div>
+          <div class="d-grid gap-2">
+            <button
+              class="btn btn-primary"
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#checkout"
+            >
+              Оформити замовлення
+            </button>
+            <button class="btn btn-outline-danger" type="button" id="cart-clear">
+              Очистити кошик
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="checkout"
+      tabindex="-1"
+      aria-labelledby="checkout-title"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title h5" id="checkout-title">Оформлення замовлення</h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Закрити"
+            ></button>
+          </div>
+          <form
+            class="needs-validation"
+            novalidate
+            data-success-message="Замовлення прийнято, чекайте дзвінка"
+          >
+            <div class="modal-body">
+              <div class="row g-3">
+                <div class="col-12">
+                  <label class="form-label" for="checkout-name">Ім'я та прізвище</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="checkout-name"
+                    required
+                    minlength="3"
+                  />
+                  <div class="invalid-feedback">Вкажіть, на кого оформити замовлення.</div>
+                </div>
+                <div class="col-12 col-sm-6">
+                  <label class="form-label" for="checkout-phone">Телефон</label>
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="checkout-phone"
+                    placeholder="+380"
+                    pattern="\+?[0-9\s\-]{10,17}"
+                    required
+                  />
+                  <div class="invalid-feedback">Формат: +380 XX XXX XX XX.</div>
+                </div>
+                <div class="col-12 col-sm-6">
+                  <label class="form-label" for="checkout-city">Місто</label>
+                  <input type="text" class="form-control" id="checkout-city" required />
+                  <div class="invalid-feedback">Вкажіть місто доставки.</div>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="checkout-delivery">Спосіб доставки</label>
+                  <select class="form-select" id="checkout-delivery" required>
+                    <option value="">Оберіть варіант</option>
+                    <option>Нова пошта, відділення</option>
+                    <option>Нова пошта, кур'єр</option>
+                    <option>Самовивіз із клубу</option>
+                  </select>
+                  <div class="invalid-feedback">Оберіть спосіб доставки.</div>
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="checkout-terms" required />
+                    <label class="form-check-label" for="checkout-terms">
+                      Погоджуюся з умовами повернення
+                    </label>
+                    <div class="invalid-feedback">Без цього замовлення не оформити.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                Скасувати
+              </button>
+              <button type="submit" class="btn btn-primary">Підтвердити</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" id="toast-host"></div>
+
+    <script src="../vendor/bootstrap.bundle.min.js"></script>
+    <script src="../js/games.js"></script>
+    <script src="../js/app.js"></script>
+  </body>
+</html>

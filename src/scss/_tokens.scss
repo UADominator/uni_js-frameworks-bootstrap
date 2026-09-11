@@ -1,0 +1,21 @@
+:root {
+  --surface: #ffffff;
+  --hero-overlay: linear-gradient(
+    105deg,
+    rgba(15, 48, 40, 0.94) 0%,
+    rgba(15, 48, 40, 0.62) 52%,
+    rgba(15, 48, 40, 0.28) 100%
+  );
+  --cover-ring: rgba(43, 38, 34, 0.06);
+}
+
+@include color-mode(dark) {
+  --surface: #232825;
+  --hero-overlay: linear-gradient(
+    105deg,
+    rgba(10, 18, 15, 0.96) 0%,
+    rgba(10, 18, 15, 0.78) 52%,
+    rgba(10, 18, 15, 0.45) 100%
+  );
+  --cover-ring: rgba(255, 255, 255, 0.08);
+}

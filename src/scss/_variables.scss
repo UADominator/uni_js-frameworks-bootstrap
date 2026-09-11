@@ -1,0 +1,81 @@
+$primary: #1e6a5a;
+$secondary: #756b62;
+$success: #3f7d4f;
+$info: #4c7d8c;
+$warning: #e3a13c;
+$danger: #b04e39;
+$light: #f2ece2;
+$dark: #2b2622;
+
+$body-bg: #faf6ef;
+$body-color: #2b2622;
+$body-secondary-color: #756b62;
+$body-secondary-bg: #f2ece2;
+$body-tertiary-bg: #f6f1e8;
+$border-color: #e6ded2;
+
+$body-bg-dark: #191d1b;
+$body-color-dark: #e8e2da;
+$body-secondary-color-dark: #a39a90;
+$body-secondary-bg-dark: #232825;
+$body-tertiary-bg-dark: #1f2421;
+$border-color-dark: #333a36;
+
+$font-family-sans-serif:
+  'Inter',
+  system-ui,
+  -apple-system,
+  'Segoe UI',
+  Roboto,
+  sans-serif;
+$headings-font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+$headings-font-weight: 600;
+$headings-line-height: 1.15;
+$line-height-base: 1.6;
+$lead-font-weight: 400;
+$small-font-size: 0.8125rem;
+
+$border-radius: 0.75rem;
+$border-radius-sm: 0.5rem;
+$border-radius-lg: 1rem;
+$border-radius-xl: 1.5rem;
+
+$box-shadow-sm: 0 1px 2px rgba(43, 38, 34, 0.07);
+$box-shadow:
+  0 1px 2px rgba(43, 38, 34, 0.06),
+  0 0.5rem 1.5rem rgba(43, 38, 34, 0.06);
+$box-shadow-lg:
+  0 2px 4px rgba(43, 38, 34, 0.06),
+  0 1.25rem 2.5rem rgba(43, 38, 34, 0.1);
+
+$surface: var(--surface);
+
+$btn-font-weight: 500;
+$btn-focus-width: 0.2rem;
+$input-btn-focus-color-opacity: 0.2;
+
+$card-bg: $surface;
+$card-border-radius: $border-radius-lg;
+$card-spacer-y: 1.125rem;
+$card-spacer-x: 1.125rem;
+
+$input-bg: $surface;
+$dropdown-bg: $surface;
+$dropdown-border-radius: $border-radius;
+$modal-content-bg: $surface;
+$accordion-bg: $surface;
+$pagination-bg: $surface;
+$list-group-bg: $surface;
+$popover-bg: $surface;
+$toast-background-color: $surface;
+$nav-tabs-link-active-bg: $surface;
+
+$navbar-padding-y: 0.75rem;
+$navbar-brand-font-size: 1.25rem;
+$navbar-dark-color: rgba(255, 255, 255, 0.78);
+$navbar-dark-hover-color: #ffffff;
+$navbar-dark-active-color: #ffffff;
+
+$breadcrumb-divider: '›';
+$table-cell-padding-y: 0.7rem;
+$offcanvas-horizontal-width: 20rem;

@@ -1,0 +1,76 @@
+.site-header {
+  background-color: $primary;
+}
+
+.navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: $headings-font-family;
+  letter-spacing: -0.01em;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.625rem;
+  background-color: $warning;
+  color: $dark;
+  font-size: 1rem;
+}
+
+.navbar .form-control:focus {
+  box-shadow: none;
+}
+
+.theme-toggle {
+  --bs-btn-color: rgba(255, 255, 255, 0.78);
+  --bs-btn-border-color: rgba(255, 255, 255, 0.28);
+  --bs-btn-hover-color: #{$dark};
+  --bs-btn-hover-bg: #ffffff;
+  --bs-btn-hover-border-color: #ffffff;
+}
+
+.theme-toggle__sun {
+  display: none;
+}
+
+[data-bs-theme='dark'] {
+  .theme-toggle__sun {
+    display: inline-block;
+  }
+
+  .theme-toggle__moon {
+    display: none;
+  }
+}
+
+.cart-count:empty {
+  display: none;
+}
+
+.site-footer {
+  background-color: #14322a;
+  color: rgba(255, 255, 255, 0.72);
+
+  a {
+    color: rgba(255, 255, 255, 0.72);
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      color: #ffffff;
+    }
+  }
+
+  h2,
+  h3 {
+    color: #ffffff;
+  }
+}
+
+.footer-note {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
